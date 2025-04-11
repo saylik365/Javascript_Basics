@@ -16,7 +16,9 @@ console.log("2" >1 ); //true
 console.log("02" >1 ); //true
 //it will result true cause, js allows it but it is must to use same datatypes
 
- // ****Confusing comparisons ****
+ // ****Confusing comparisons **** should avoid
+
+ //the NULL sometimes convert itself into the 0 or NaN while comparison.
 console.log(null> 0); //false
 console.log(null== 0); //false
 console.log(null >=0); //true
