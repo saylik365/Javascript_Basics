@@ -8,6 +8,8 @@ console.log(name + age + "Value"); //Basic String Concatenation
 //MODERN WAY OF STRING CONCATENATION/ DECLARATION
 // USING BACKTICS, known as string interpolation
 
+//Another way of string declaration
+const Anothername = new String("John Doe"); // output will be same as above
 
 const name2 = "John Doe";
 const age2 = 30;
