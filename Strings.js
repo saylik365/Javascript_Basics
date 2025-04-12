@@ -21,3 +21,11 @@ console.log(`My name is ${name2} and I am ${age2} years old.`); //String Interpo
 //String access using index
 console.log(name[0]);
 console.log(name.__proto__); // __proto__ is used to access the prototype of the object
+
+
+console.log(name.length); //Length of the string
+console.log(name.charAt(2)); //Accessing the character of the string
+console.log(name.toUpperCase()); //Converts the string to uppercase
+console.log(name.indexOf("o")); //Returns the index of the first occurrence of the specified value in a string
+
+
