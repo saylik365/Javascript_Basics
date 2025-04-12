@@ -17,3 +17,7 @@ console.log(`My name is ${name2} and I am ${age2} years old.`); //String Interpo
 //String Interpolation allows us to use variables inside a string without using + operator
 // In short it creates placeholders for the variables inside the string
 // and replaces them with the actual values of the variables.
+
+//String access using index
+console.log(name[0]);
+console.log(name.__proto__); // __proto__ is used to access the prototype of the object
