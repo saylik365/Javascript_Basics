@@ -28,4 +28,3 @@ console.log(name.charAt(2)); //Accessing the character of the string
 console.log(name.toUpperCase()); //Converts the string to uppercase
 console.log(name.indexOf("o")); //Returns the index of the first occurrence of the specified value in a string
 
-
