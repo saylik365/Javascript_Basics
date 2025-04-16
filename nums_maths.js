@@ -64,8 +64,16 @@ console.log("The Random value is: "+Math.random()); // returns a random number b
 console.log(Math.random() * 10); // returns a random number between 0 and 10
 // It multiplies the random number by 10 to get a number between 0 and 10.
 
-console.log(Math.random() * 10 +1); // returns a random number between 1 and 10
+console.log((Math.random() * 10) +1); // returns a random number between 1 and 10
 // It adds 1 to the random number to get a number between 1 and 10.
+
+console.log(Math.floor(Math.random() * 10) +1);
+
+const min = 10;
+const max = 20;
+//to get a random number between a range, we can use the following formula:
+console.log(Math.floor(Math.random() * (max - min + 1)) + min); // returns a random number between 10 and 20
+
 
 
 
