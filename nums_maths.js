@@ -54,6 +54,20 @@ console.log(Math.ceil(4.1)); // returns 5 because it rounds the number up to the
 
 console.log(Math.floor(4.9)); // returns 4 because it rounds the number down to the nearest integer
 
+console.log("The Minimum value is: " + Math.min(4, 5, 8, 2, 1)); // returns 1 because it returns the minimum value from the list of numbers
+
+console.log("The Maximum value is: "+ Math.max(4, 5, 8, 2, 1)); // returns 8 because it returns the maximum value from the list of numbers
+
+console.log("The Random value is: "+Math.random()); // returns a random number between 0 and 1.
+// It is a pseudo-random number generator, so it does not return truly random numbers, but rather numbers that appear to be random.
+
+console.log(Math.random() * 10); // returns a random number between 0 and 10
+// It multiplies the random number by 10 to get a number between 0 and 10.
+
+console.log(Math.random() * 10 +1); // returns a random number between 1 and 10
+// It adds 1 to the random number to get a number between 1 and 10.
+
+
 
 
 
