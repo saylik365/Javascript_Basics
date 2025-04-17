@@ -44,3 +44,22 @@ console.log(Date.now() / 1000); // current timestamp in seconds
 //but the problem is that it will be in float, so you can use Math.floor() to get the integer value
 
 console.log(Math.floor(Date.now() / 1000)); // current timestamp in seconds
+
+//+++++++++++++++ date methods ++++++++++++++
+let newdate = new Date();
+console.log(newdate.getFullYear()); // get the year of the date
+console.log("The Month starting index from 0 is: "+ newdate.getMonth()); // get the month of the date but the index starts from 0, so sometimes its confusing
+//so, to get the month in 1 indexed format, you can use getMonth() + 1
+console.log("The month starting index from 1 is: "+ (newdate.getMonth()+1));
+console.log(newdate.getDate()); // get the day of the date
+console.log(newdate.getDay()); // get the day of the week of the date
+
+console.log(`${newdate.getUTCDate()}/${newdate.getMonth()+1}/${newdate.getFullYear()} and the time is ${newdate.getHours()}:${newdate.getMinutes()}:${newdate.getSeconds()}`); // get the date and time of the date
+
+
+//++++++Important +++++
+console.log(newdate.toLocaleString({
+    // weekday: 'long',
+    calendar: 'gregory',
+    // timeZone: 'UTC',
+}))
