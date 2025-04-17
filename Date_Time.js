@@ -15,3 +15,32 @@ console.log(mydate.toJSON()); // convert date to JSON string
 console.log(mydate.toLocaleString()); // convert date to string in local time zone
 console.log(mydate.toLocaleDateString()); // convert date to string in local time zone
 console.log(mydate.toLocaleTimeString()); // convert date to string in local time zone
+
+console.log(typeof mydate); // object
+//date is an object in js because it is a built in object and not a primitive data type
+console.log(mydate instanceof Object); // true
+
+console.log(mydate instanceof Date); // true
+
+
+let anotherDate = new Date(2023, 0, 23);
+console.log(anotherDate);
+console.log(anotherDate.toDateString()); 
+//in Javascript, months are 0 indexed, so 0 is January and 11 is December
+
+let anotherDate1 = new Date("2023-01-23");
+//if the date is in the format YYYY-MM-DD, the month will be 1 indexed, if in array format, it will be 0 indexed
+
+let myTimeStamp = Date.now(); // current timestamp in milliseconds
+console.log(myTimeStamp); 
+//it shows the timestamp in milliseconds since 1970-01-01T00:00:00Z
+
+//if you want to get the timestamp of declared date, you can use getTime() method
+console.log(anotherDate.getTime()); 
+console.log(anotherDate1.getTime()); 
+
+//if you want to get the timestamp in seconds, you can divide the timestamp by 1000
+console.log(Date.now() / 1000); // current timestamp in seconds
+//but the problem is that it will be in float, so you can use Math.floor() to get the integer value
+
+console.log(Math.floor(Date.now() / 1000)); // current timestamp in seconds
