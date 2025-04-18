@@ -43,5 +43,16 @@ console.log(Array.isArray("Anamika"));
 //it will check if the given value is an array or not, it will return false
 
 console.log(Array.from("Anamika"));
+//from() is used to convert the given value into an array, if it's iterable
 //it will return an array, [ 'A', 'n', 'a', 'm', 'i', 'k', 'a' ]
 //it will convert the string into an array, but it will not check if it's an array or not
+
+console.log(Array.from({name: "Anamika"}));
+//it will return an empty array, because the object is not iterable 
+
+let score = 100;
+let score2 = 200;
+let score3 = 300;
+console.log(Array.of(score, score2, score3));
+//it will return an array, [ 100, 200, 300 ]
+//of() is used to create an array from the given values, it will not check if it's an array or not
