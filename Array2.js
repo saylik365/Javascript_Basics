@@ -38,3 +38,10 @@ const anothernewArr = anotherArr.flat(Infinity) // it asks for depth, but if it'
 //it will automatically handle the situation understanding the depth.
 console.log(anothernewArr)
 
+//+++++++ This one is used for data scraping +++++++
+console.log(Array.isArray("Anamika"));
+//it will check if the given value is an array or not, it will return false
+
+console.log(Array.from("Anamika"));
+//it will return an array, [ 'A', 'n', 'a', 'm', 'i', 'k', 'a' ]
+//it will convert the string into an array, but it will not check if it's an array or not
