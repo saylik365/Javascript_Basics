@@ -40,11 +40,32 @@ const newArr = [6,5,7,8,9]
 console.log(myArr.join("--")); //joins the elements of the array with the given separator
 console.log(typeof newArr); //returns the type of the variable
 
+/*✅ Why typeof newArr is "object" here:
+In this snippet, newArr is declared as an array: const newArr = [6,5,7,8,9];
+Arrays are a special type of object in JavaScript.
+So typeof newArr returns "object".*/
 
 const newArr2 = myArr.join();
 console.log(newArr2); //returns the string of the array
 console.log(myArr);
 console.log(typeof newArr2); //returns the type of the variable
+
+/*Why typeof newArr is "string" here:
+Here, myArr.join() is called immediately and the result (a string like "1,2,3,4,5") is assigned to newArr.
+So now newArr is not an array anymore — it's a string.
+Hence, typeof newArr returns "string". */
+
+console.log("A", myArr)
+const myn1 = myArr.slice(1,3) //the range is 1 - 3 but it will return only 1th and 2nd element. 3rd element won't get returned
+//output : 2,3 
+console.log(myn1); //returns the sliced array
+console.log("B", myArr) //will return whole array even after performing slice.
+
+const myn2 = myArr.splice(1,3)
+console.log(myn2)
+console.log("C", myArr) // will return remaining elements only after splice.
+
+
 
 
 
