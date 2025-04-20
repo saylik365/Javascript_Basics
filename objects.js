@@ -12,7 +12,7 @@
 
 //always ask in interviews: use symbol to create a singleton object
 const sym = Symbol("Symbol1");
-
+//non-singletone object
 const user = {
     name: "Sidhhi ",
     [sym]: "Symbol2",
