@@ -50,5 +50,7 @@ navbar({company: "Google"}); // Google
     {},
     {},
 ]
+
+
 // use randomuser me api website  and jsonformattor to get the data in json format and use it in the code.
 //jsonformatter is a tool that helps to format json data and make it more readable.
