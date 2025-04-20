@@ -1,2 +1,2 @@
-marvel_heroes.push(DC_heroes)
-console.log(marvel_heroes); 
+console.log("Please enter a valid username"); //if the username is not provided, return this message
+        return;
