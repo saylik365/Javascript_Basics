@@ -28,3 +28,4 @@ if (true){
 console.log(a) // 100
 
 //the scope declared in console is different from the scope declared in the nodejs file
+
