@@ -9,3 +9,8 @@ function one(){
     two() // Call the inner function to access the outer variable
 }
 one();
+
+if(true){
+    const username = "Sayli"
+    if(username === "Sayli"){}
+}
