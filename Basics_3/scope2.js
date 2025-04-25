@@ -33,8 +33,9 @@ function addOne(num){
 addOne(5) //it returns 6, but will not print it to the console
 
 
-console.log(addTwo(5)) //will give error, because addTwo is defined after this line, and it is not hoisted
+// console.log(addTwo(5)) //will give error, because addTwo is defined after this line, and it is not hoisted
 //because we have hold the function in a variable, so it is not hoisted
+
 const addTwo = function (num){
     return num + 2
 }
