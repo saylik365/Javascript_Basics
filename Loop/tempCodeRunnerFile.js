@@ -1,4 +1,6 @@
-for(let i= 1; i<=20; i++){
-//     console.log(`Value of i is: ${i}`)//it will run till 20.
-// }
-// //i
+let myArray = ["flash", "batman", "superman"]
+let arr = 0
+while (arr < myArray.length) {
+    console.log(`Value is ${myArray[arr]}`)
+    arr = arr + 1
+}
