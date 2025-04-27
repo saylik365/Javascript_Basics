@@ -16,6 +16,31 @@ const coding = ['js', 'ruby', 'java', 'python', 'cpp'];
 // }
 // coding.forEach(printMe)
 
-coding.forEach( (item, index, arr)=>{
-    console.log(item, index, arr)
+// coding.forEach( (item, index, arr)=>{
+//     console.log(item, index, arr)
+// })
+
+const myCoding = [
+    {
+        languageName: 'javascript',
+        languageFileName: 'js'
+    },
+    {
+        languageName: 'java',
+        languageFileName: 'java'
+    },
+    {
+        languageName: 'python',
+        languageFileName: 'py'
+    },
+    {
+        languageName: 'cpp',
+        languageFileName: 'cpp'
+    }
+]
+
+myCoding.forEach(( item ) => {
+    // console.log(Object[item])//will return undefined
+    console.log(`language file name is: ${item.languageFileName}`)
+    // console.log(`language name is:${item.languageName}`)
 })
