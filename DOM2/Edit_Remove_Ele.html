@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit or Remove Element</title>
+</head>
+<body style="background-color: #212121;color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    //basic way but it traverses the whole DOM tree to find the element
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`;
+        document.querySelector('.language').appendChild(li);
+    }
+    addLanguage('Python');
+    addLanguage('Java');
+
+    //an optimized way that directly appends the element to the parent node
+    //this way is more efficient as it doesn't require traversing the DOM tree
+    function addOptimizedLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptimizedLanguage('C++');
+    addOptimizedLanguage('C#');
+
+    //+++++++++++++++++ Edit +++++++++++++++++++
+    const secondLang = document.querySelector("li: nth-child(2)")
+    //secondLang.innerHTML = "JavaScript";
+    const newli = document.createElement('li');
+    newli.textContent = "GoLang";
+    secondLang.replaceWith(newli);
+    //replaceWith() method replaces the specified element with the new element.
+
+    //Edit
+    // const firstLang = document.querySelector("li:nth-child(1)");
+
+    // const firstLang = document.querySelector("li:first-child");
+
+    // // firstLang.outerHTML = "<li>Typescript</li>";
+    // //outerHTML property returns the HTML markup of the specified element.
+
+    // const newli2 = document.createElement('li');
+    // newli2.textContent = "SQL";
+    // firstLang.replaceWith(newli2);
+
+    //Remove: 
+    const lastLang = document.querySelector("li:nth-child(4)");
+    lastLang.remove();
+    //remove() method removes the specified element from the DOM.
+</script>
+</html>
