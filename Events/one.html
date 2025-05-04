@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body style="background-color: #414141;color: #fff;">
+    <h1>Amazing Images</h1>
+    <div>   
+        <ul id="images">
+            <li>
+                <img width="200px" id="img1" src="https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg" alt="img1">
+            </li>
+            <li>
+                <img width="200px" id="img2" src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="img2">
+            </li>
+            <li>
+                <img width="200px" id="img3" src="https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp" alt="img3">
+                <!--onclick="alert('Hello')" this approach is not recommended because it is not feasible-->
+            </li>
+            <li>
+                <img width="200px" id="img4" src="https://images.unsplash.com/photo-1593696954577-ab3d39317b97?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZyZWUlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D" alt="img4">
+            </li>
+            <li>
+                <img width="200px" id="img5" src="https://img.freepik.com/premium-photo/awesome-view-river-sky_954226-164279.jpg" alt="img5">
+            </li>
+            <li>
+                <a style="color: aliceblue;"  href="https://www.google.com" id="google">Google</a>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    //all the events in javascript run sequentially/synchronously
+    //but the events in the browser run asynchronously
+    //this means that the events in the browser can run at any time
+
+    /*document.getElementById('img3').onclick = function(){
+        alert('Hello from img3');
+    } //this is a traditional approach*/
+   //this approach also has problems cause it does not give all the info so you should use eventlisteners.
+   //event listeners will give you functioanality and propagation ability.
+
+//    document.getElementById('img3').addEventListener('click', function(){
+//     alert('Hello From Image 3');
+//    },false)
+
+   //the third parameter is the useCapture which is a boolean value that tells the browser whether to use the event capturing or not.
+   //if it is true then the event will be captured and if it is false then the event will be in the bubbling phase.
+   //the default value is false.
+
+   //other than addEventListener, attachEvent is also used but it is deprecated and not recommended to use it.
+   //jquery also has its own event handling methods like .on() and .off() which are used to attach and detach events respectively.
+
+//+++++++++++ To Study about events ++++++++++++++
+    //type, timestamp, defaultPrevented
+    //target, toElement, srcElement, currentTarget
+    //clientX, clientY, screenX, screenY, offsetX, offsetY
+    //altkey, ctrlkey, shiftkey, keycode
+
+
+//event propagation is the process of how the event is propagated through the DOM tree.
+//it has two phases: event capturing and event bubbling phase.
+//in the capturing phase, the event is captured by the parent element and then it is passed to the child element.
+//in the bubbling phase, the event is passed from the child element to the parent element.
+//the default value is false which means that the event will be in the bubbling phase.
+//event bubbling is mostly used. 
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked in UL")
+
+    }, true) //false) 
+    document.getElementById('img3').addEventListener('click', function(e){
+        console.log("Clicked on image 3")
+
+    }, true) //false)
+    //if i use false on both the code snippets, it will give clicked on image 3 and then clicked in UL
+    //basically it follows inside out approach.
+    //if i use true on both the code snippets, it will give clicked in UL and then clicked on image 3
+    //basically it follows outside in approach or top down approach.
+    
+document.getElementById('img3').addEventListener('click', function(e){
+    console.log(e)//you will get browser events or environment events.
+})
+</script>
+</html>
