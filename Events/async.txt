@@ -1,0 +1,14 @@
+Default Javascript
+js is a synchronous language, also a single-threaded language
+
+then comes execution context, which is a concept that describes the environment in which JavaScript code is executed.
+it execute code line by line, it has call stack and memory heap
+each operation waits for the previous one to finish before it starts executing
+this is called blocking code
+
+Blocking Code
+-Blocks the flow of execution/program
+
+non-blocking code
+-does not block the flow of execution/program
+
