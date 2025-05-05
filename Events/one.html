@@ -36,15 +36,17 @@
     //but the events in the browser run asynchronously
     //this means that the events in the browser can run at any time
 
-    /*document.getElementById('img3').onclick = function(){
-        alert('Hello from img3');
-    } //this is a traditional approach*/
-   //this approach also has problems cause it does not give all the info so you should use eventlisteners.
-   //event listeners will give you functioanality and propagation ability.
+//     /*document.getElementById('img3').onclick = function(){
+//         alert('Hello from img3');
+//     } */
+        //this is a traditional approach
+//     //this approach is not recommended because it will override the previous event handler and only the last event handler will be executed
+//    //this approach also has problems cause it does not give all the info so you should use eventlisteners.
+//    //event listeners will give you functioanality and propagation ability.
 
-//    document.getElementById('img3').addEventListener('click', function(){
-//     alert('Hello From Image 3');
-//    },false)
+// //    document.getElementById('img3').addEventListener('click', function(){
+// //     alert('Hello From Image 3');
+// //    },false)
 
    //the third parameter is the useCapture which is a boolean value that tells the browser whether to use the event capturing or not.
    //if it is true then the event will be captured and if it is false then the event will be in the bubbling phase.
@@ -69,18 +71,42 @@
     document.getElementById('images').addEventListener('click', function(e){
         console.log("clicked in UL")
 
-    }, true) //false) 
+    }, false) //false) 
     document.getElementById('img3').addEventListener('click', function(e){
         console.log("Clicked on image 3")
+        e.stopPropagation()//this will stop the event from propagating to the parent element.
+        //will give clicked on image 3.
+        //e.stopImmediatePropagation() this will stop the event from propagating to the parent element and also stop the other events from firing.
+    }, false) //false)
 
-    }, true) //false)
     //if i use false on both the code snippets, it will give clicked on image 3 and then clicked in UL
     //basically it follows inside out approach.
     //if i use true on both the code snippets, it will give clicked in UL and then clicked on image 3
     //basically it follows outside in approach or top down approach.
     
-document.getElementById('img3').addEventListener('click', function(e){
-    console.log(e)//you will get browser events or environment events.
-})
+document.getElementById('google').addEventListener('click', function(e){
+    e.preventDefault()//this will prevent the a tag from redirecting to the google page.
+    e.stopPropagation()//this will stop the event from bubbling up to the parent element.
+    console.log("Google clicked")//you will get browser events or environment events.
+},false)
+
+ //when you click on the img, the img should be removed.
+ document.querySelector('#images').addEventListener('click', function(e){
+    // console.log(e)
+    // console.log(e.target)
+    // console.log(e.target.parentNode)
+    // console.log(e.target.tagName)
+    if(e.target.tagName==='IMG'){
+        console.log(e.target.id)
+        let removeIt = e.target.parentNode
+    
+    //two methods to remove the img from the DOM.
+    removeIt.remove();
+    // removeIt.parentNode.removeChild(removeIt)//this will remove the img from the DOM.
+    }
+    
+ },false)
+
+
 </script>
 </html>
