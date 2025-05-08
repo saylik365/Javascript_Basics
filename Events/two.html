@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>Hello There</h1>
+    <button id="stop">STOP</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log("Sayli🙂");
+    // }, 2000);
+    //setTimeout is a function that takes two arguments: a function and a time in milliseconds. It will execute the function after the specified time has passed.
+
+    // const print = function(){
+    //     console.log("Sayli🙂");
+    // }
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "Hello World!";
+    }
+
+    //if you want to stop the setTimeout function, you can use clearTimeout. You need to store the setTimeout in a variable and then pass that variable to clearTimeout.
+    
+    const ChangeMe = setTimeout(changeText,2000);
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(ChangeMe)
+        alert("Stopped the setTimeout()")
+    })
+
+
+</script>
+</html>

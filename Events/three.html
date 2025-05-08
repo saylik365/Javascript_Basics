@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>Welcome to the JS</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+
+</body>
+<script>
+    //setInterval is a function that takes two arguments: a function and a time in milliseconds. It will execute the function after the specified time has passed and then repeat it every specified time.
+    //difference between setInterval and setTimeout is that setTimeout will execute the function only once after the specified time, while setInterval will execute the function repeatedly after the specified time.
+
+    // setInterval(() => {
+    //     console.log("Sayli", Date.now())
+    // }, 1000);
+
+    // const saydate = function(str) {
+    //     console.log(str, Date.now());
+    // }
+    // const intervalID =setInterval(saydate,1000,"Sayli")
+    
+
+    // clearInterval(intervalID)
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "Hello World!";
+    }
+
+    document.querySelector('#start').addEventListener('click', function(){
+        setInterval(changeText,1000)
+    })
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(changeText)
+        alert('SetInterval stopped!!')
+        // document.querySelector('h1').innerHTML = "Welcome to the JS";
+    })
+    </script>
+</html>
