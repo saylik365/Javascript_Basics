@@ -1,0 +1,41 @@
+<!-- mdn httprequest -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API REQUEST</title>
+ </head>
+ <body>
+    <!-- This is an API request using XMLHttpRequest.and 0, 1 , 2 ,3 ,4 are the states of XMLHttpRequest. -->
+    <!-- 0 UNSENT Client has been created. Open() not called yet.
+    1 OPENED open() has been called.
+    2 HEADERS_RECEIVED send() has been called, and headers and status are available.
+    3 LOADING Downloading; responseText holds partial data.
+    4 DONE The operation is complete -->
+
+ </body>
+ <script>   
+     const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    //XMLHttpRequest is a built-in browser object that allows to make HTTP requests in JavaScript.
+    const xhr = new XMLHttpRequest()
+    //XMLHttpRequest() is used to send or receive data.
+
+    xhr.open('GET', requestUrl)
+    // console.log("HERE");
+    xhr.onreadystatechange= function(){ //used to track and monitor the state of the request.
+        console.log(xhr.readyState)//the state of the request changes.
+        if (xhr.readyState === 4) {
+            // console.log(this.responseText) //the request is complete and the response is ready.
+            // const data= this.responseText
+            const data= JSON.parse(this.responseText)
+            console.log(data.followers)//it will return undefined.
+            // console.log(typeof data )//it will return string.so to convert it into object we use JSON.parse() method. 
+            console.log(data)
+        }//this is used to refer current context. 
+    }
+
+    //console.log from v8 engine. whole info 
+    xhr.send()
+ </script>
+ </html>
