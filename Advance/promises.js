@@ -144,5 +144,12 @@ fetch('https://jsonplaceholder.typicode.com/users')
 .catch((error) => console.log(error));
 
 // this code's output is getting in first place and then the other codes are executing / giving outputs. 
-//Why?
+//Why? 
+/* 
+In JS engine -> call stack -> global execution context is there and also functions.  
+from web API's fetch creates a new queue called - microtask queue / priority queue / fetch queue
+anything fetch works with goes to that queue - having higher priority so, whenever execution happens -
+callback/function(anything) from fetch queue goes to top of the call stack.
+That's why - it executes first and then remaining functions. 
+*/
 
