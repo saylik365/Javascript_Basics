@@ -24,3 +24,7 @@ function multipleBy5(num){
 multipleBy5.power = 2;
 console.log(multipleBy5.power);
 console.log(multipleBy5.prototype); // {} // prototype object of function
+
+function createuser(username, score){
+    
+}
