@@ -26,5 +26,26 @@ console.log(multipleBy5.power);
 console.log(multipleBy5.prototype); // {} // prototype object of function
 
 function createuser(username, score){
-    
+    this.username = username;
+    this.score = score;
 }
+
+createuser.prototype.increment = function(){
+    this.score++;
+}
+
+createuser.prototype.printMe = function(){
+    console.log(`Score is ${this.score} `);
+}
+
+// const hello = createuser("Sakshi", 25)
+// const hello1 = createuser("Saniya", 250)
+
+// hello.printMe() //it will give error like - cannot read properties of undefined.
+//the properties are injected through prototype, but you have to tell you got new properties,
+//so use "new" keyword
+
+const hello = new createuser("Sakshi", 25)
+const hello1 = new createuser("Saniya", 250)
+
+hello.printMe()
