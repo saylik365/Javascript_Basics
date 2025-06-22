@@ -1,0 +1,37 @@
+<!-- The bind() method creates a new function that, when called, has its this keyword set to the provided value. 
+ It does not immediately invoke the function.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React{
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:300";
+            document.querySelector("button").addEventListener("click", this.handleClick.bind(this)); 
+            //binds the context of this to the current instance of React;
+
+        }
+
+        //requirement
+        //1. button reference
+        //2. click
+
+        handleClick(){
+            console.log("Button clicked");
+            console.log(this.server);//undefined, it's giving reference but not the value, use bind to set the value of this
+            console.log(this)
+        }
+    }
+
+    const app = new React()
+</script>
+</html>
