@@ -1,3 +1,5 @@
+// Getter and Setter uses get and set keywords cause class is available in ES6 and above
+// Getter is used to access the value of a property and Setter is used to set the value
 class User{
     constructor(email, password){
         this.email = email;
@@ -22,7 +24,7 @@ class User{
     }
 
     //error: maximum call stack size exceeded , cause the value is set many times. in constructor or below
-    //so, use _password to avoid this issue
+    //so, use _password to avoid this issue . it is  private property
     
 }
 const sayli = new User("s@sayli.com", "abc");

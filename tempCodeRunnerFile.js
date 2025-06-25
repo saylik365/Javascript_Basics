@@ -1,3 +1,2 @@
- // orderproduct : function(){
-    //     console.log("Code fat gaya")
-    // }
+  // this.email= email;
+    // this.password= password;
