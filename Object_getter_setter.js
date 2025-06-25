@@ -13,3 +13,5 @@ const User ={
 
 const Sayli = Object.create(User); //factory function
 console.log(Sayli.email); 
+
+//according to ES2022, there is a private property proposal where we use # instead of _

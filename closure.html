@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    
+</body>
+<script> 
+    // function init(){ //outer function
+    //     let name = "Closure";
+    //     function displayName() { //inner function
+    //         console.log(name);
+    //     }
+    //     displayName();
+    // }
+    // init()
+
+    // function Outer(){
+    //     let username = "Sayli";
+    //     console.log(secret);//secret is not defined here
+        
+    //     function inner(){
+    //         let secret = "mySecret123";
+    //         console.log("inner Username: " + username);
+    //     }
+    //     function inner2(){
+    //         console.log("Inner2 Username: " + username);
+    //         console.log("Secret: " + secret); // This will cause an error because 'secret' is not defined in this scope
+    //     }
+    //     inner()
+    //     inner2();
+    // }
+    // Outer()
+    // console.log("Outer Username: " + username); // This will cause an error because 'username' is not defined in this scope
+
+
+    //++++++++++ Closure Example ++++++++++
+    //it returns lexical scope
+    function makeFunc() {
+        const name = "Mozilla";
+        function displayName(){
+            console.log(name);
+        }
+        return displayName; 
+    }
+    const myFunc = makeFunc();
+    myFunc();   
+</script>
+</html>
